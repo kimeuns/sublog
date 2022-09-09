@@ -31,6 +31,7 @@ app.get('/', (req, res)=>{
 // 전체 목록
 app.get('/campgrounds', async (req, res)=>{
     const campgrounds = await Campground.find({});
+    console.log('plese help me')
     res.render('campgrounds/index', {campgrounds})
 })
 
@@ -76,3 +77,4 @@ app.delete('/campgrounds/:id', async (req, res)=>{
 app.listen(3000, () =>{
     console.log('Serving on 3000 Port')
 })
+
